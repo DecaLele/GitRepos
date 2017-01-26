@@ -4,8 +4,11 @@
              xmlns:local="clr-namespace:WMAA"
              x:Class="WMAA.MainPage">
 
-  <Label Text="Welcome to Xamarin Forms!"
-           VerticalOptions="Center"
-           HorizontalOptions="Center" />
-
+  <StackLayout Orientation="Vertical">    
+    <Image x:Name="Picture" heigthRequest="400" />
+    <ActivityIndicator x:Name="Indicator" isVisible ="False" IsRunning="False" />
+    <Button x:Name="btnCamera" Clicked="btnCamera_Click" Text="Take" />  
+    <Button x:Name="btnGallery" Clicked="btnGallery_Click" Text="Gallery" />
+    <Label x:Name="lblStatus" Text="{Binding Path=MessageStatus}" />
+  </StackLayout>
 </ContentPage>

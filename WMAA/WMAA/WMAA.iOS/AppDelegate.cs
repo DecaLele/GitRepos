@@ -4,6 +4,8 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile;
 
 namespace WMAA.iOS
 {
@@ -25,6 +27,7 @@ namespace WMAA.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            MobileCenter.Configure("ad7708ff-9208-4fd3-b5e0-f2e4ef12061b");
             return base.FinishedLaunching(app, options);
         }
     }

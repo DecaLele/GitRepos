@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.Azure.Mobile;
 
 namespace WMAA.Droid
 {
@@ -20,6 +21,7 @@ namespace WMAA.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            MobileCenter.Configure("ad7708ff-9208-4fd3-b5e0-f2e4ef12061b");
             LoadApplication(new App());
         }
     }
