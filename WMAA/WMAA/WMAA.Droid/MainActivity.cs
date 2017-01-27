@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using Microsoft.Azure.Mobile;
+using Plugin.Permissions;
 
 namespace WMAA.Droid
 {
@@ -23,6 +24,11 @@ namespace WMAA.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             MobileCenter.Configure("ad7708ff-9208-4fd3-b5e0-f2e4ef12061b");
             LoadApplication(new App());
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+        {
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }
